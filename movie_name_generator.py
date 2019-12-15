@@ -26,9 +26,13 @@ def create_name():
     global context_to_word
     context_to_word=get_name()
     inital=input("What word would you like to start with? ")
+    inital=inital.capitalize()    
+    while not inital in context_to_word:
+        inital=input("Please select another word that you would like to start with? ")
+        inital=inital.capitalize()
     #length=int(input("min long of a name? "))
-    length=3
     word=inital
+    length=3
     movie=""
     while len(movie) < length:
         movie=""
