@@ -13,7 +13,7 @@ def get_name():
                 context=" "
             else:
                 context=movie[index+1]
-            if word in context_to_word:
+            if word in context_to_word: 
                 context_to_word[word].append(context)
             else:
                 context_to_word[word]=[context]
@@ -21,10 +21,9 @@ def get_name():
     return context_to_word
 
     
-    
+context_to_word=get_name()    
 def create_name():
     global context_to_word
-    context_to_word=get_name()
     inital=input("What word would you like to start with? ")
     inital=inital.capitalize()    
     while not inital in context_to_word:
